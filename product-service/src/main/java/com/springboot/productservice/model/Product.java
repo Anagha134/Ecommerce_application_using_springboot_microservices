@@ -1,6 +1,4 @@
 package com.springboot.productservice.model;
-
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
