@@ -1,0 +1,10 @@
+com\springboot\productservice\dto\ProductResponse.class
+com\springboot\productservice\controller\ProductController.class
+com\springboot\productservice\model\Product$ProductBuilder.class
+com\springboot\productservice\dto\ProductRequest.class
+com\springboot\productservice\model\Product.class
+com\springboot\productservice\repository\ProductRepository.class
+com\springboot\productservice\dto\ProductResponse$ProductResponseBuilder.class
+com\springboot\productservice\dto\ProductRequest$ProductRequestBuilder.class
+com\springboot\productservice\ProductServiceApplication.class
+com\springboot\productservice\service\ProductService.class

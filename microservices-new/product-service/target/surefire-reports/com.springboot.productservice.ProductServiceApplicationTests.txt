@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.springboot.productservice.ProductServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.641 s <<< FAILURE! - in com.springboot.productservice.ProductServiceApplicationTests
+com.springboot.productservice.ProductServiceApplicationTests  Time elapsed: 0.639 s  <<< ERROR!
+java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
