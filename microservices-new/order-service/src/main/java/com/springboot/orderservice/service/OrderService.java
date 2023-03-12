@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
     public void PlaceOrder(OrderRequest orderRequest){
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
@@ -35,8 +35,8 @@ public class OrderService {
         List<String> skuCodes = order.getOrderLineItemsList().stream().map(orderLineItem ->orderLineItem.getSkuCode()).toList();
         //call Inventory service, and place order if product is in stock
 
-        InventoryResponse[] inventoryResponsesArray = webClient.get()
-                .uri("http://localhost:8083/api/inventory",
+        InventoryResponse[] inventoryResponsesArray = webClientBuilder.build().get()
+                .uri("http://inventory-service/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
                  .retrieve()//to retrieve the response and need to specify the type of response that is done using mono
                  .bodyToMono(InventoryResponse[].class) //to be able to read the response by webclient we need to mention bodytomono method -- need to mention type of response
